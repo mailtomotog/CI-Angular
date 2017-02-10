@@ -307,6 +307,42 @@ switch (ENVIRONMENT)
 
 /*
  * --------------------------------------------------------------------
+ * LOAD THE FRONT-END ASSETS
+ * --------------------------------------------------------------------
+ *
+ * This is a personal customization, CodeIgniter
+ * standard does not contain it. It was done because
+ * of the AngularJS integration.
+ */
+// The path to the "assets" directory
+$assets_folder = 'assets';
+if (is_dir($assets_folder))
+{
+	if (($_temp = realpath($assets_folder)) !== FALSE)
+	{
+		$assets_folder = $_temp;
+	}
+	else
+	{
+		$assets_folder = strtr(
+			rtrim($assets_folder, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		);
+	}
+}
+else
+{
+	header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+	echo 'Your assets folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+	exit(3); // EXIT_CONFIG
+}
+
+define('ASSETSPATH', $assets_folder.DIRECTORY_SEPARATOR);
+require_once ASSETSPATH.'includes.php';
+
+/*
+ * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE
  * --------------------------------------------------------------------
  *
