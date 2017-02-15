@@ -1,3 +1,10 @@
-                <br><em>&copy; 2015</em>
-        </body>
-</html>
+<?php
+/* ----------------------------------------
+ * 
+ * ----------------------------------------
+ *
+ */
+?>
+<div ng-controller="FooterController">
+	<br><em>&copy; {{year}}</em>
+</div>

@@ -1,6 +1,7 @@
-<IfModule authz_core_module>
-    Require all denied
-</IfModule>
-<IfModule !authz_core_module>
-    Deny from all
-</IfModule>
+/* ------------------------------
+ * Views folder access
+ * ------------------------------
+ * The htaccess restriction was removed
+ * to enable the AngularJS files to use
+ * the CodeIgniter views.
+ */

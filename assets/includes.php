@@ -29,5 +29,7 @@ define('JSPATH', $assets_folder.'js/');
 	<script src=<?php echo JSPATH."app.js"; ?>></script>
 	<script src=<?php echo JSPATH."controllers.js"; ?>></script>
 	<script src=<?php echo JSPATH."routes.js"; ?>></script>
+	<!-- ANGULAR ROUTES BASE -->
+	<base href="/CI-Angular/">
 </head>
 <body ng-app="app">

@@ -6,16 +6,13 @@ var viewsPath = 'application/views/';
 
 appModule
 
-.config(function($routeProvider){
-
+.config(function($routeProvider, $locationProvider){
+	$locationProvider.html5Mode(true);
 	//Define the custom routes
 	$routeProvider
 	.when('/home', {
-		template: viewsPath+'home/index.php',
-		controller: 'homeController'
+		templateUrl: viewsPath+'home/index.php',
+		controller: 'HomeController'
 	})
-	.otherwise({
-        template: viewsPath+'home/index.php',
-		controller: 'homeController'
-    });
+	.otherwise({redirectTo: '/home'});
 });

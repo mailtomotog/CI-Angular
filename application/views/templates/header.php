@@ -1,7 +1,10 @@
-<html>
-        <head>
-                <title>CodeIgniter Tutorial</title>
-        </head>
-        <body>
-
-                <h1 class="teste"><?php echo $title; ?></h1>
+<?php
+/* ----------------------------------------
+ * 
+ * ----------------------------------------
+ *
+ */
+?>
+<div ng-controller="HeaderController">
+	<h1 class="teste">{{title}}</h1>
+</div>
