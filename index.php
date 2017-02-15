@@ -309,10 +309,10 @@ switch (ENVIRONMENT)
  * --------------------------------------------------------------------
  * LOAD THE FRONT-END ASSETS
  * --------------------------------------------------------------------
- *
+ * 
  * This is a personal customization, CodeIgniter
- * standard does not contain it. It was done because
- * of the AngularJS integration.
+ * standard does not contain it. It was done for
+ * AngularJS integration.
  */
 // The path to the "assets" directory
 $assets_folder = 'assets';
